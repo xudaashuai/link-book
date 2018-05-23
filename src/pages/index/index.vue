@@ -1,22 +1,94 @@
 <template>
-  <div>
-    <card text="123">123</card>
+  <div class="page">
+    <swiper :indicator-dots="true">
+      <swiper-item v-for="item in swipers">
+        <div class="s-img"></div>
+      </swiper-item>
+    </swiper>
+    <BookCard v-for="book in books" :book="book"></BookCard>
   </div>
 </template>
 
 <script>
-  import card from '@/components/card'
+  import BookCard from '@/components/BookCard'
 
   export default {
     data() {
       return {
         motto: 'Hello World',
-        userInfo: {}
+        userInfo: {},
+        books: [
+          {
+            title: 'LinkBook 从入门到放弃',
+            desc: 'desc',
+            user: '徐大帅',
+            author: '徐大帅',
+            score: 9.9,
+            price: 5.0,
+            sale: 7.7,
+          },
+          {
+            title: 'LinkBook 从入门到放弃',
+            desc: 'desc',
+            user: '徐大帅',
+            author: '徐大帅',
+            score: 9.9,
+            price: 5.0,
+            sale: 7.7,
+          },
+          {
+            title: 'LinkBook 从入门到放弃',
+            desc: 'desc',
+            user: '徐大帅',
+            author: '徐大帅',
+            score: 9.9,
+            price: 5.0,
+            sale: 7.7,
+          },
+          {
+            title: 'LinkBook 从入门到放弃',
+            desc: 'desc',
+            user: '徐大帅',
+            author: '徐大帅',
+            score: 9.9,
+            price: 5.0,
+            sale: 7.7,
+          },
+          {
+            title: 'LinkBook 从入门到放弃',
+            desc: 'desc',
+            user: '徐大帅',
+            author: '徐大帅',
+            score: 9.9,
+            price: 5.0,
+            sale: 7.7,
+          },
+          {
+            title: 'LinkBook 从入门到放弃',
+            desc: 'desc',
+            user: '徐大帅',
+            author: '徐大帅',
+            score: 9.9,
+            price: 5.0,
+            sale: 7.7,
+          },
+        ],
+        swipers:[
+          {
+            url:'',
+          },
+          {
+            url:'',
+          },
+          {
+            url:'',
+          },
+        ]
       }
     },
 
     components: {
-      card
+      BookCard
     },
 
     methods: {
@@ -36,9 +108,6 @@
           }
         })
       },
-      clickHandle(msg, ev) {
-        console.log('clickHandle:', msg, ev)
-      }
     },
 
     created() {
@@ -49,39 +118,12 @@
 </script>
 
 <style scoped>
-  .userinfo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  .page {
+    font-size: 16rpx;
   }
-
-  .userinfo-avatar {
-    width: 128 rpx;
-    height: 128 rpx;
-    margin: 20 rpx;
-    border-radius: 50%;
-  }
-
-  .userinfo-nickname {
-    color: #aaa;
-  }
-
-  .usermotto {
-    margin-top: 150px;
-  }
-
-  .form-control {
-    display: block;
-    padding: 0 12px;
-    margin-bottom: 5px;
-    border: 1px solid #ccc;
-  }
-
-  .counter {
-    display: inline-block;
-    margin: 10px auto;
-    padding: 5px 10px;
-    color: blue;
-    border: 1px solid blue;
+  .s-img{
+    background-color: #aaaaaa;
+    width: 100%;
+    height: 300rpx;
   }
 </style>

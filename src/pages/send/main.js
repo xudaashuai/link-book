@@ -6,6 +6,6 @@ app.$mount()
 
 export default {
   config: {
-    navigationBarTitleText: 'LinkBook'
+    navigationBarTitleText: '发布'
   }
 }

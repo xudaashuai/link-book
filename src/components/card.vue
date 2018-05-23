@@ -15,6 +15,7 @@ export default {
 <style>
 .card {
   padding: 10px;
-  box-shadow: #aaaaaa 0 0 10px 0;
+  box-shadow: #aaaaaa 0 0 10rpx 0;
+  border-radius: 5rpx;
 }
 </style>
